@@ -1,14 +1,14 @@
 'use strict';
 
 const money = +prompt('Ваш месячный доход?'),
-      income = '49550',
+      income = 'фриланс',
       addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую'),
       deposit = confirm('Есть ли у вас депозит в банке?'),
       expenses1 = prompt('Введите обязательную статью расходов?'),
       amount1 = +prompt('Во сколько это обойдется?'),
       expenses2 = prompt('Введите обязательную статью расходов?'),
       amount2 = +prompt('Во сколько это обойдется?'),
-      budgetMonth = +income + money - amount1 - amount2,
+      budgetMonth = money - amount1 - amount2,
       mission = 350000,
       period = Math.ceil(mission / budgetMonth),
       budgetDay = Math.floor(budgetMonth / 30);
