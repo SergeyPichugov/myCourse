@@ -1,18 +1,17 @@
 'use strict';
 
-let isNumber = function(n) {
+const isNumber = function(n) {
    return !isNaN(parseFloat(n)) && isFinite(n);
 };
 
-let money,
-   income = 'фриланс',
-   addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую'),
-   deposit = confirm('Есть ли у вас депозит в банке?'),
-   mission = 350000,
-   expenses = [];
-      
+const income = 'фриланс',
+      addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую'),
+      deposit = confirm('Есть ли у вас депозит в банке?'),
+      mission = 350000,
+      expenses = [];
+let money;  
 
-let start = function() {
+const start = function() {
    
    do {
       money = prompt('Ваш месячный доход?');
