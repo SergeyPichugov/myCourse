@@ -16,7 +16,7 @@ const start = function() {
 
 start();
 
-let appData = {
+const appData = {
    budget: money,
    budgetDay: 0,
    budgetMonth: 0,
@@ -52,39 +52,34 @@ let appData = {
             }
             console.log(appData.expenses);
          };
-
-
-
-
-
+   },
+   getBudget: function () {
+      appData.budgetMonth = appData.budget - appData.expensesMonth;
+   
+      appData.budgetDay = Math.floor(appData.budgetMonth / 30);
+   },
+   getTargetMonth: function () {
+      return Math.ceil(appData.mission / appData.budgetMonth);
+   },
+   getStatusIncome: function() {
+      if (appData.budgetDay > 1200) {
+         return ('У вас высокий уровень дохода');
+      } else if (appData.budgetDay > 600 && appData.budgetDay <= 1200) {
+         return ('У вас средний уровень дохода');
+      } else if (appData.budgetDay > 0 && appData.budgetDay <= 600) {
+         return ('К сожалению у вас уровень дохода ниже среднего');
+      } else if (appData.budgetDay <= 0) {
+         return ('Что то пошло не так');
+      }
    }
+
 };
 
 appData.asking();
 
-
-
 appData.getExpensesMonth();
 
-
-
-
-
-
-
-appData.getBudget = function () {
-   appData.budgetMonth = appData.budget - appData.expensesMonth;
-
-   appData.budgetDay = Math.floor(appData.budgetMonth / 30);
-};
-
-
-appData.getTargetMonth = function () {
-   return Math.ceil(appData.mission / appData.budgetMonth);
-};
-
 appData.getBudget();
-
 
 
 function missionComplete() {
@@ -94,19 +89,6 @@ function missionComplete() {
       return ('Цель не будет достигнута');
    }
 }
-
-
-appData.getStatusIncome = function() {
-   if (appData.budgetDay > 1200) {
-      return ('У вас высокий уровень дохода');
-   } else if (appData.budgetDay > 600 && appData.budgetDay <= 1200) {
-      return ('У вас средний уровень дохода');
-   } else if (appData.budgetDay > 0 && appData.budgetDay <= 600) {
-      return ('К сожалению у вас уровень дохода ниже среднего');
-   } else if (appData.budgetDay <= 0) {
-      return ('Что то пошло не так');
-   }
-};
 
 
 console.log('Pacходы за месяц: ' + appData.expensesMonth);
