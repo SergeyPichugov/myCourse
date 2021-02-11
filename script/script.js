@@ -1,12 +1,14 @@
 'use strict';
 
 const startBtn = document.getElementById('start'),
-      incomeAdd = document.getElementsByTagName('button')[0],
-      expensesAdd = document.getElementsByTagName('button')[1],
+      btnPlus = document.getElementsByTagName('button'),
+      incomePlus = btnPlus[0],
+      expensesPlus = btnPlus[1],
       depositCheckbox = document.querySelector('#deposit-check'),
       additionalIncomeItemOne = document.querySelectorAll('.additional_income-item')[0],
       additionalIncomeItemTwo = document.querySelectorAll('.additional_income-item')[1],
       budgetDayValue = document.getElementsByClassName('budget_day-value')[0],
+      budgetMonthValue = document.getElementsByClassName('budget_month-value')[0],
       expensesMonthValue = document.getElementsByClassName('expenses_month-value')[0],
       additionalIncomeValue = document.getElementsByClassName('additional_income-value')[0],
       additionalExpensesValue = document.getElementsByClassName('additional_expenses-value')[0],
@@ -20,7 +22,6 @@ const startBtn = document.getElementById('start'),
       additionalExpensesItem = document.querySelector('.additional_expenses-item'),
       targetAmount = document.querySelector('.target-amount'),
       periodSelect = document.querySelector('.period-select');
-
 
 const isNumber = function(n) {
    return !isNaN(parseFloat(n)) && isFinite(n);
