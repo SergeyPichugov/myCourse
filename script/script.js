@@ -1,26 +1,25 @@
 'use strict';
 
-const startBtn = document.getElementById('start');
-const incomeAdd = document.getElementsByTagName('button')[0];
-const expensesAdd = document.getElementsByTagName('button')[1];
-const depositCheckbox = document.querySelector('#deposit-check');
-const additionalIncomeItemOne = document.querySelectorAll('.additional_income-item')[0];
-const additionalIncomeItemTwo = document.querySelectorAll('.additional_income-item')[1];
-const budgetDayValue = document.getElementsByClassName('budget_day-value')[0];
-const expensesMonthValue = document.getElementsByClassName('expenses_month-value')[0];
-const additionalIncomeValue = document.getElementsByClassName('additional_income-value')[0];
-const additionalExpensesValue = document.getElementsByClassName('additional_expenses-value')[0];
-const incomePeriodValue = document.getElementsByClassName('income_period-value')[0];
-const targetMonthValue = document.getElementsByClassName('target_month-value')[0];
-
-const salaryAmount = document.querySelector('.salary-amount');
-const incomeTitleItem = document.querySelector('.income-title-item');
-const incomeAmount = document.querySelector('.income-amount');
-const expensesTtitleItem = document.querySelector('.expenses-title-item');
-const expensesAmount = document.querySelector('.expenses-amount');
-const additionalExpensesItem = document.querySelector('.additional_expenses-item');
-const targetAmount = document.querySelector('.target-amount');
-const periodSelect = document.querySelector('.period-select');
+const startBtn = document.getElementById('start'),
+      incomeAdd = document.getElementsByTagName('button')[0],
+      expensesAdd = document.getElementsByTagName('button')[1],
+      depositCheckbox = document.querySelector('#deposit-check'),
+      additionalIncomeItemOne = document.querySelectorAll('.additional_income-item')[0],
+      additionalIncomeItemTwo = document.querySelectorAll('.additional_income-item')[1],
+      budgetDayValue = document.getElementsByClassName('budget_day-value')[0],
+      expensesMonthValue = document.getElementsByClassName('expenses_month-value')[0],
+      additionalIncomeValue = document.getElementsByClassName('additional_income-value')[0],
+      additionalExpensesValue = document.getElementsByClassName('additional_expenses-value')[0],
+      incomePeriodValue = document.getElementsByClassName('income_period-value')[0],
+      targetMonthValue = document.getElementsByClassName('target_month-value')[0],
+      salaryAmount = document.querySelector('.salary-amount'),
+      incomeTitleItem = document.querySelector('.income-title-item'),
+      incomeAmount = document.querySelector('.income-amount'),
+      expensesTtitleItem = document.querySelector('.expenses-title-item'),
+      expensesAmount = document.querySelector('.expenses-amount'),
+      additionalExpensesItem = document.querySelector('.additional_expenses-item'),
+      targetAmount = document.querySelector('.target-amount'),
+      periodSelect = document.querySelector('.period-select');
 
 
 const isNumber = function(n) {
