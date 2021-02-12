@@ -247,7 +247,8 @@ h1 {
 }
 
 .data .period {
-   text-align: center
+   text-align: center;
+   padding-bottom: 50px;
 }
 
 .data .period-title {
