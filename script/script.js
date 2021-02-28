@@ -318,29 +318,14 @@ class AppData {
    }
 
    getAddExpInc() {
+      const addExpenses = additionalExpensesItem.value.split(',');
+      const count = (item) => {
+         item.value ? item.value.trim() && this.addIncome.push(item.value) : item.trim && this.addExpenses.push(item);
+      };
 
-      additionalIncomeItem.forEach((item) => {
-         const itemValue = item.value.trim();
-         if (itemValue !== '') {
-            this.addIncome.push(itemValue);
-         }
-      });
-
-      let addExpenses = additionalExpensesItem.value.split(',');
-
-      addExpenses.forEach((item) => {
-         item = item.trim();
-         if (item !== '') {
-            this.addExpenses.push(item);
-         }
-      });
-
-      // let tmp = additionalExpensesItem.className.split('_')[1].split('-')[0];
-      // let addIncExp = 'add' + tmp.charAt(0).toUpperCase() + tmp.slice(1); // достать слово
-
+      additionalIncomeItem.forEach(count);
+      addExpenses.forEach(count);
    }
-
-
 
 }
 
